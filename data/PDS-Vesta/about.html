@@ -1,0 +1,90 @@
+<html>
+<title>Small Bodies Image Browser</title>
+<body>
+
+<table border=0 width="100%">
+<tbody><tr bgcolor="#cccccc" valign=top>
+  <td>
+   <table width="100%">
+   <tbody><tr>
+   <td align=left>
+   <img alt="NASA Logo" src=images/nasa_logo.gif><BR>
+   </td>
+   <td align=right valign=middle>
+      <font face="Arial" size=6>Small Bodies Image Browser</font>
+   </td>
+   </tr>
+   </tbody></table>
+   </td>
+   </tr>
+   <tr>
+   <td>
+      <img alt="PDS Logo" width=100% src=images/pds_banner.jpg>
+   </td>
+   </tr>
+</tbody></table><BR><BR>
+
+<H3 style="margin:2px">
+Vesta Mission Phases (from end to beginning) covered in SBIB
+</H3>
+<UL style="margin-top:0">
+<LI> TransC - Transfer from HAMO2 to Ceres (aka Departure)
+<LI> HAMO2 - A second High Altitude Mapping Orbit 
+<LI> LAMO - Low Altitude Mapping Orbit; about 210 km
+<LI> TransL - Transfer from HAMO to LAMO
+<LI> HAMO - High Altitude Mapping Orbit; about 680 km
+<LI> TransH - Transfer from Survey orbit to HAMO
+<LI> Survey - Consists of a full and complete survey of Vesta; includes all FC filters and expansive VIR observations
+</UL>
+
+<H3 style="margin-bottom:2px">Map Projection and Arc-GIS</H3>
+Data can be imported into ArcMAP 10.1 by downloading the ISIS Map cubes.  
+<BR>
+Most images (PNG and thumbnails) were generated
+with an equirectangular projection.
+Images that are near the poles have been projected with a polar projection.  
+
+
+<H3 style="margin-bottom:2px">Maps</H3>
+We use several different overview maps for the Image Browser.  References for each:
+<UL style="margin-top:0">
+<LI>Topographic - Gaskell et al., AGU Fall Meeting (2011)
+<LI>Geological - Jaumann et al., Science 336, 687 (2012)
+<LI>Color - Le Corre et al., Icarus 226,1568 (2013)
+<LI>DLR Framing camera mosaic - Roatsch et al., P&SS 85, 293 (2013)
+</UL>
+
+<H3 style="margin-bottom:2px">Data processing</H3>
+We used the USGS software tool <a href=http://isis.astrogeology.usgs.gov>Integrated Software for Imagers and Spectrometers (ISIS)</a>
+as the main tool to process the data.  
+<BR>
+We used Gaskell's shape model and the ISIS
+software routines to convert images into map-based projections.
+
+<H3 style="margin-bottom:2px">Coordinates</H3>
+This software uses the PDS-Vesta-2012 coordinate system, as approved by the IAU (<a href=https://sbn.psi.edu/archive/dawn/fc/DWNVFC2_1A/DOCUMENT/VESTA_COORDINATES/VESTA_COORDINATES_131018.PDF>details</a>).  
+This system is also known as the "Claudia Double Prime."  
+<BR>
+<UL style="margin-top:0">
+<LI>Spin Pole of Vesta at RA=309.0 deg, Dec=42.2 deg
+<LI>Rotation period 0.2226 days (Drummond et al., 1998)
+<LI>Prime Meridian parameter W0=285.4 deg and Wdot=1617.33 deg/day
+</UL><BR>
+
+
+<table border=1><tr width=150><td width=100>
+	<H2>Legend for the geologic map</H2>
+</td><td>
+	<a href="Legend.png" target="_blank">
+ 	<img width="100" src="images/Legend.png" />
+	</a>
+</td></tr></table>
+
+<H3 style="margin-bottom:2px">Comments</H3>
+email epalmer at psi dot edu with questions, comments or concerns
+
+<BR><BR>
+
+
+</body></html>
+

@@ -1,0 +1,65 @@
+<html>
+<title>Small Bodies Image Browser</title>
+<body>
+
+<table border=0 width="100%">
+<tbody><tr bgcolor="#cccccc" valign=top>
+  <td>
+   <table width="100%">
+   <tbody><tr>
+   <td align=left>
+   <img alt="NASA Logo" src=images/nasa_logo.gif><BR>
+   </td>
+   <td align=right valign=middle>
+      <font face="Arial" size=6>Small Bodies Image Browser</font>
+   </td>
+   </tr>
+   </tbody></table>
+   </td>
+   </tr>
+   <tr>
+   <td>
+      <img alt="PDS Logo" width=100% src=images/pds_banner.jpg>
+   </td>
+   </tr>
+</tbody></table><BR><BR>
+
+<H3 style="margin:2px">
+	Cassini ISS raw and calibrated .IMG files were downloaded from the Ring-Moon Systems Node with OPUS. 
+<br>Images were restricted to a maximum Body Center resolution of 7.5 km/pix.<br> 
+The Dione data were sorted into the following for easier access: ultra_high_res, high_res, regional_map, geodesy, global_color, wispy_streaks, limb_topo, zero_phase, low_phase, high_phase, crescent, spectrophotometry, eclipse, plume_search, mutual_event, movie.
+</H3>
+<BR>
+<H3 style="margin-bottom:2px">Data Download</H3>
+Highlight the data you would like to download, click 'Download'. Notes for the download screen: 'raw' and 'calibrated' buttons refer to the fits files. For downloading e.g. jpg files in camera view, click on 'jpg'; for projected view, click on 'Projected' and then again on 'jpg'. Note that the file names are the same for the camera and projected view.
+<BR>
+<H3 style="margin-bottom:2px">Map Projection and ArcGIS</H3>
+Data can be imported into ArcGIS by downloading the ISIS Map cubes. NOTE that wecalibrated the downloaded raw .IMG files with cisscal version 3.9.1 before creating the ISIS cubes and other file formats. The downloaded calibrated data were processed with cisscal version 3.8 by the Ring-Moon Systems Node. 
+<BR>
+Most images (PNG and thumbnails) were generated
+with an equirectangular projection.
+Images that are near the poles have been projected with a polar projection.  
+
+<H3 style="margin-bottom:2px">Maps</H3>
+We use an equatorial overview map (from <a href=https://photojournal.jpl.nasa.gov/beta/catalog/PIA14914>here</a>) for the Image Browser.  
+
+<H3 style="margin-bottom:2px">Data processing</H3>
+We used the USGS software tool <a href=http://isis.astrogeology.usgs.gov>Integrated Software for Imagers and Spectrometers (ISIS)</a>
+as the main tool to process the data.  
+We used the pre-Dawn shape model posted at USGS and the ISIS
+software routines to convert images into map-based projections.
+
+<H3 style="margin-bottom:2px">Coordinates</H3>
+The files list the coordinates in East Longitude. However, the base map is shown in West Longitude with the prime meridian in the middle of the map as it is commonly diplsayed for the Saturnian Satellites.
+<BR>
+The orientation of the map projected images in the pre-view window is consisten with the footprint orientation on the base map while the camera view might be rotated compared to the base map depending on the orientation of the spacecraft at the time. However, the location is always correct.
+
+
+<H3 style="margin-bottom:2px">Comments</H3>
+email mueller at psi dot edu with questions, comments or concerns
+
+<BR><BR>
+
+
+</body></html>
+
