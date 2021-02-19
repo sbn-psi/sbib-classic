@@ -1,259 +1,339 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>SBIB - Small Bodies Image Browser</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
 </head>
 <body>
-<table border=0 width="100%">
-<tbody><tr bgcolor="#cccccc" valign=top>
-  <td>
-	<table width="100%">
-	<tbody><tr>
-	<td align=left>
-	<img alt="NASA Logo" src=images/nasa_logo.gif><BR>
-	</td>
-	<td align=right valign=middle>
-		<font face="Arial" size=6>Small Bodies Image Browser</font>
-	</td>
-	</tr>
-	</tbody></table>
-	</td>
-	</tr>
-	<tr>
-	<td>
-		<img alt="PDS Logo" width=100% src=images/pds_banner.jpg>
-	</td>
-	</tr>
-</tbody></table>
+    <main>
+        <div class="sbn-main">
+
+            <div class="intro">
+                <div class="intro-text">
+                    <h1>Small Bodies Image Browser</h1>
+                    <p>
+                        The <strong>Small Bodies Image Browser</strong> (SBIB) is designed to graphically search through 
+                        the large number of images quickly. It takes about 2-5 minutes to download the 
+                        database to your browser depending on your internet connection.  Once done, 
+                        data searches are very fast.
+                        Currently SBIB accesses OSIRIS-REX Bennu, New Horizons Pluto Encounter,
+                        Dawn Vesta, Dawn Ceres, Near Eros, and Cassini Rhea, Iapetus and Enceladus data.  Additional missions and objects will be added as
+                        development continues. <BR/><BR/>
+                        SBIB will display a map and options to search for images.
+                    </p>
+                </div>
+
+                <div class="intro-features card">
+                    <h2>Key Features</h2>    
+                    <UL>
+                    <LI>Search by coordinates 
+                    <LI>Show an entire sequence
+                    <LI>Display image data
+                    <LI>Draw image footprint on the map
+                    <LI>Show thumbnail images, either map projected or original
+                    <LI>Download raw or processed images
+                    </UL>
+                    <div class="card-actions">
+                        <a class="button primary-action" href="details.html">
+                        <div class="button-ripple"></div>
+                        <span>Read More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
 
+                
+            <div class="primary-actions">
+                <div class="card">
+                    <img src="images/bennu_shape2.gif">
+                    <div class="card-content">
 
-The <B>Small Bodies Image Browser</B> (SBIB) is designed to graphically search through 
-the large number of images quickly. It takes about 2-5 minutes to download the 
-database to your browser depending on your internet connection.  Once done, 
-data searches are very fast.
-Currently SBIB accesses OSIRIS-REX Bennu, New Horizons Pluto Encounter,
-Dawn Vesta, Dawn Ceres, Near Eros, and Cassini Rhea, Iapetus and Enceladus data.  Additional missions and objects will be added as
-development continues. <BR><BR>
-SBIB will display a map and options to search for images.
+                        <h2>OSIRIS-REx Mission to Bennu</h2>
 
-<H3 style="margin-top:2px;margin-bottom:2px">
-Key Features <span style="font-weight:normal"><a href=details.html>(Details)</a></span></H3>
-<UL style="margin-top:3px">
-<LI>Search by coordinates 
-<LI>Show an entire sequence
-<LI>Display image data
-<LI>Draw image footprint on the map
-<LI>Show thumbnail images, either map projected or original
-<LI>Download raw or processed images
-</UL>
+                        <ul>
+                            <li>OSIRIS-REx Camera Suite (MapCam, Polycam & SamCam)</li>
+                            <li>Raw and I/F (iof) data from Approach to Sample Collection (OpNav)</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <a class="button" href="data/PDS-Bennu/about.html">
+                          <div class="button-ripple"></div>
+                          <span>About</span>
+                        </a>
+                        <a class="button primary-action" href="data/PDS-Bennu/index.html">
+                          <div class="button-ripple"></div>
+                          <span>Launch</span>
+                        </a>
+                      </div>
+                </div>
+                <div class="card">
+                    <img src="images/Pluto.jpg">
+                    <div class="card-content">
 
-<BR>
+                        <h2>New Horizons Encounter with Pluto</h2>
 
+                        <ul>
+                            <li>Long Range Reconaissance Imager (LORRI)</li>
+                            <li>Raw and calibrated images for the Encounter</li>
+                            <li>Multispectral Visible Imaging Camera (MVIC)</li>
+                            <li>Raw and calibrated images for the Encounter</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <a class="button" href="data/PDS-Pluto/about.html">
+                          <div class="button-ripple"></div>
+                          <span>About</span>
+                        </a>
+                        <a class="button primary-action" href="data/PDS-Pluto/index.html">
+                          <div class="button-ripple"></div>
+                          <span>Launch</span>
+                        </a>
+                      </div>
+                </div>
 
-<table border=1>
-<TR> 
-<TD><H1><center>OSIRIS-REx Mission to Bennu</center></H1>
-<center>
-<form method=link action=data/PDS-Bennu/index.html>
-<input type=submit value="Launch the Bennu Image Browser">
-</form>
-</center>
-<BR> 
-<UL>
-<LI> <a href=/data/PDS-Bennu/about.html>Bennu's about page</a><BR>
-<H3>Available data</H3>
-<UL>
-<LI>OSIRIS-REx Camera Suite (MapCam, Polycam & SamCam) </H4>
-<UL>
-<LI>Raw and I/F (iof) data from Approach to Sample Collection (OpNav)
-</UL>
-</TD> <TD>
-<img width=400 src=images/bennu_shape2.gif>
-</TD></TR>
+                <div class="card">
+                    <img src="images/ceres.jpg">
+                    <div class="card-content">
 
-<TR>
-<TD><H1><center>New Horizons Encounter with Pluto</center></H1>
-<center>
-<form method=link action=PDS-Pluto/index.html>
-<input type=submit value="Launch the Pluto Image Browser">
-</form>
-</center>
-<BR>
-<UL>
-<LI> <a href=PDS-Pluto/about.html>Pluto's about page</a><BR>
-<H3>Available data</H3>
-<UL>
-<LI>Long Range Reconaissance Imager (LORRI)</H4>
-<UL>
-<LI>Raw and calibrated images for the Encounter
-</UL>
-<LI>Multispectral Visible Imaging Camera (MVIC)</H4>
-<UL>
-<LI>Raw and calibrated images for the Encounter
-</UL>
-</UL>
-</TD>
+                        <h2>Dawn Mission to Ceres</h2>
 
-<TD>
-<img width=400 src=images/Pluto.jpg>
-</TD></TR>
+                        <ul>
+                            <li>Framing Camera</li>
+                            <li>Levels 1A and 1B through XMO7</li>
+                            <li>Visible and InfraRed Mapping Spectrometer</li>
+                            <li>Level 1B through XMO7</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <a class="button" href="data/PDS-Ceres/about.html">
+                          <div class="button-ripple"></div>
+                          <span>About</span>
+                        </a>
+                        <a class="button primary-action" href="data/PDS-Ceres/pds-ceres.html">
+                          <div class="button-ripple"></div>
+                          <span>Launch</span>
+                        </a>
+                      </div>
+                </div>
 
-<TR>
-<TD><H1><center>Dawn Mission to Ceres</center></H1>
-<center>
-<form method=link action=data/PDS-Ceres/pds-ceres.html>
-<input type=submit value="Launch the Ceres Image Browser">
-</form>
-</center>
-<BR>
-<UL>
-<LI> <a href=/data/PDS-Ceres/about.html>Ceres' about page</a><BR>
-<H3>Available data including extended mission </H3>
-<UL>
-<LI>Framing Camera</H4>
-<UL>
-<LI>Levels 1A and 1B through XMO7
-</UL>
-<LI>Visible and InfraRed Mapping Spectrometer</H4>
-<UL>
-<LI>Level 1B through XMO7
-</UL>
-</UL>
-</TD>
+                <div class="card">
+                    <img src="images/OpNav19-small.gif">
+                    <div class="card-content">
 
-<TD>
-<img width=400 src=images/ceres.jpg>
-</TD></TR>
+                        <h2>Dawn Mission to Vesta</h2>
 
-<TR>
-<TD><H1><center>Dawn Mission to Vesta</center></H1>
-<center>
-<form method=link action=data/PDS-Vesta/pds-vesta.html>
-<input type=submit value="Launch Vesta Image Browser">
-</form>
-</center>
-<BR>
-<UL>
-<LI> <a href=data/PDS-Vesta/about.html>Vesta's about page</a><BR>
-<H3>Available data</H3>
-<UL>
-<LI>Framing Camera</H4>
-<UL>
-<LI>Levels 1A and 1B (excluding approach)
-</UL>
-<LI>Visible and InfraRed Mapping Spectrometer</H4>
-<UL>
-<LI>Level 1B (excluding approach & departure)
-</UL>
-</UL>
-
-</TD> <TD>
-<img width=400 src=images/OpNav19-small.gif>
-</TD></TR>
-
-<TR>
-<TD><BR><H1><center>NEAR Shoemaker Mission to 433 Eros</center></H1>
-<center>
-<form method=link action=data/PDS-Eros/pds-eros.html>
-<input type=submit value="Launch the Eros Image Browser">
-</form>
-</center>
-<BR>
-<UL>
-<LI> <a href=PDS-Eros/about.html>Eros' about page</a><BR>
-<H3>Available data</H3>
-<UL>
-<LI>Multi-Spectral Imager</H4>
-<UL>
-<LI>Calibrated Level 2 and 3 data (excluding approach)
-</UL>
-</UL>
-</TD>
-
-<TD>
-<img width=400 src=images/WholeEros.jpg>
-</TD>
-</TR>
-
-<TR>
-<TD><BR><H1><center>Cassini Mission: Rhea (Saturn V)</center></H1>
-<center>
-<form method=link action=data/PDS-Rhea/index.html>
-<input type=submit value="Launch the Rhea Image Browser">
-</form>
-</center>
-<BR>
-<UL>
-<LI> <a href=PDS-Rhea/about.html>Rhea's about page</a><BR>
-<H3>Available data</H3>
-<UL>
-<LI>Imaging Science Subsystem (ISS)</H4>
-<UL>
-<LI>Raw and i/f data in multiple orbits <br> (maximum body center resolution of 10 km/pix)
-</UL>
-</UL>
-</TD>
-
-<TD>
-<img width=400 src=images/rhea_image.jpg>
-</TD>
-</TR>
-
-<TR>
-<TD><BR><H1><center>Cassini Mission: Iapetus (Saturn VIII)</center></H1>
-<center>
-<form method=link action=data/PDS-Iapetus/index.html>
-<input type=submit value="Launch the Iapetus Image Browser">
-</form>
-</center>
-<BR>
-<UL>
-<LI> <a href=PDS-Iapetus/about.html>Iapetus' about page</a><BR>
-<H3>Available data</H3>
-<UL>
-<LI>Imaging Science Subsystem (ISS)</H4>
-<UL>
-<LI>Raw and i/f data in multiple orbits <br> (maximum body center resolution of 7.5 km/pix)
-</UL>
-</UL>
-</TD>
-
-<TD>
-<img width=400 src=images/iapetus.jpg>
-</TD>
-</TR>
-
-<TR>
-<TD><BR><H1><center>Cassini Mission: Enceladus (Saturn II)</center></H1>
-<center>
-<form method=link action=data/PDS-Enceladus/index.html>
-<input type=submit value="Launch the Iapetus Enceladus Browser">
-</form>
-</center>
-<BR>
-<UL>
-<LI> <a href=PDS-Enceladus/about.html>Iapetus' about page</a><BR>
-<H3>Available data</H3>
-<UL>
-<LI>Imaging Science Subsystem (ISS)</H4>
-<UL>
-<LI>Raw and i/f data in multiple orbits <br> (maximum body center resolution of 5 km/pix)
-</UL>
-</UL>
-</TD>
-
-<TD>
-<img width=400 src=images/enceladus_image.jpg>
-</TD>
-</TR>
-
-</TABLE>
+                        <ul>
+                            <li>Framing Camera</li>
+                            <li>Levels 1A and 1B (excluding approach)</li>
+                            <li>Visible and InfraRed Mapping Spectrometer</li>
+                            <li>Level 1B (excluding approach & departure)</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <a class="button" href="data/PDS-Vesta/about.html">
+                          <div class="button-ripple"></div>
+                          <span>About</span>
+                        </a>
+                        <a class="button primary-action" href="data/PDS-Vesta/pds-vesta.html">
+                          <div class="button-ripple"></div>
+                          <span>Launch</span>
+                        </a>
+                      </div>
+                </div>
 
 
-<H3>Comments</H3>
-Please send comments, bugs and suggestions to epalmer at psi dot edu.
-<BR>
-Date: 02 Dec 2020 <BR><BR>
+                <div class="card">
+                    <img src="images/WholeEros.jpg">
+                    <div class="card-content">
+
+                        <h2>
+                            NEAR Shoemaker Mission to 433 Eros
+                        </h2>
+
+                        <ul>
+                            <li>
+                                Multi-Spectral Imager
+                            </li>
+                            <li>
+                                Calibrated Level 2 and 3 data (excluding approach)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        
+                        <a class="button" href="data/PDS-Eros/about.html">
+                          <div class="button-ripple"></div>
+                          <span>About</span>
+                        </a>
+                        <a class="button primary-action" href="data/PDS-Eros/pds-eros.html">
+                          <div class="button-ripple"></div>
+                          <span>Launch</span>
+                        </a>
+                      </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/rhea_image.jpg">
+                    <div class="card-content">
+
+                        <h2>
+                            Cassini Mission: Rhea (Saturn V)
+                        </h2>
+
+                        <ul>
+                            <li>
+                                Imaging Science Subsystem (ISS)
+                            </li>
+                            <li>
+                                Raw and i/f data in multiple orbits <br> (maximum body center resolution of 10 km/pix)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        
+                        <a class="button" href="data/PDS-Rhea/about.html">
+                          <div class="button-ripple"></div>
+                          <span>About</span>
+                        </a>
+                        <a class="button primary-action" href="data/PDS-Rhea/index.html">
+                          <div class="button-ripple"></div>
+                          <span>Launch</span>
+                        </a>
+                      </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/iapetus.jpg">
+                    <div class="card-content">
+
+                        <h2>
+                            Cassini Mission: Iapetus (Saturn VIII)
+                        </h2>
+
+                        <ul>
+                            <li>
+                                Imaging Science Subsystem (ISS)
+                            </li>
+                            <li>
+                                Raw and i/f data in multiple orbits <br> (maximum body center resolution of 10 km/pix)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        
+                        <a class="button" href="data/PDS-Iapetus/about.html">
+                          <div class="button-ripple"></div>
+                          <span>About</span>
+                        </a>
+                        <a class="button primary-action" href="data/PDS-Iapetus/index.html">
+                          <div class="button-ripple"></div>
+                          <span>Launch</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/enceladus_image.jpg">
+                    <div class="card-content">
+
+                        <h2>
+                            Cassini Mission: Enceladus (Saturn II)
+                        </h2>
+
+                        <ul>
+                            <li>
+                                Imaging Science Subsystem (ISS)
+                            </li>
+                            <li>
+                                Raw and i/f data in multiple orbits <br> (maximum body center resolution of 5 km/pix)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        
+                        <a class="button" href="data/PDS-Enceladus/about.html">
+                          <div class="button-ripple"></div>
+                          <span>About</span>
+                        </a>
+                        <a class="button primary-action" href="data/PDS-Enceladus/index.html">
+                          <div class="button-ripple"></div>
+                          <span>Launch</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                <!-- 
+
+                    ######## TEMPLATE #######
+
+                <div class="card">
+                    <img src=" ### IMAGE ADDRESS ### ">
+                    <div class="card-content">
+
+                        <h2>
+                            ### TITLE ###
+                        </h2>
+
+                        <ul>
+                            <li>
+                                ### AVAILABLE DATA ITEM ###
+                            </li>
+                            <li>
+                                ### AVAILABLE DATA ITEM ###
+                            </li>
+                            <li>
+                                ### AVAILABLE DATA ITEM ###
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        
+                        <a class="button" href=" ### ABOUT PAGE URL ### ">
+                          <div class="button-ripple"></div>
+                          <span>About</span>
+                        </a>
+                        <a class="button primary-action" href=" ### APPLICATION URL ### ">
+                          <div class="button-ripple"></div>
+                          <span>Launch</span>
+                        </a>
+                      </div>
+                </div>
+
+                -->
+
+            </div>
+        </div>
+    </main>
+    
+
+    <footer class="sbn-footer">
+        <p class="sbn-footer-text">
+            Please send comments, bugs and suggestions to epalmer at psi dot edu. Updated: 02 Dec 2020
+        </p>
+    </footer>
+
+    <div class="sbn-footer-extended">
+        <aside class="sbn-footer-psi-container">
+            <img src="images/PSI_Logo.png" alt="PSI Logo" title="PSI Logo" class="psi-logo">
+            <span>Hosted by the Planetary Science Institute</span>
+        </aside>
+    </div>
+
+    <link href="https://pds.nasa.gov/pds-app-bar/pds-app-bar.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://pds.nasa.gov/pds-app-bar/pds-app-bar.js"></script>
+
+    <script type="text/javascript" src="http://localhost:321/sbn-bar/sbn-bar.js"></script>
 </body>
 </html>

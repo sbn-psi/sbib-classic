@@ -1,0 +1,478 @@
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	  display: block;
+}
+body {
+	  line-height: 1;
+}
+ol, ul {
+	  list-style: none;
+}
+blockquote, q {
+	  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* === Theme colors === */
+
+/* Dark - default */
+:root {
+    --page-background: #12181D;  /* Grey 900 */
+    --background-l1: #192028;  /* Grey 800 */
+    --section-header: #282F36;  /* Grey 700 */
+    --raised-content: #474C53;  /* Grey 600 */
+    --raised-content-hover: #656A6F;  /* Grey 500 */
+    --text: #FDFDFD; /* Grey 50 */
+    --secondary-text: #C0C2C4; /* Grey 300 */
+    --icon: #FDFDFD; /* Grey 50 */
+    --link: #B5DCFB; /* Blue 200 */
+    --link-visited: #C39EF2; /* Purple 100 */
+    --link-hover: #D5EBFD;  /* Blue 100 */
+    --link-visited-hover: #DBCBF4;  /* Purple 50 */
+    --link-subtitle: #FFFFFF;  /* Grey 0 */
+    --button: #57B4FF;  /* Grey 400 */
+    --button-contrast: #000000;  /* Grey 1000 */
+    --hr: rgba(255, 255, 255, 0.25);  /* Grey 0 25% */
+}
+
+/* Light */
+[data-theme="light"] {
+    --page-background: #FFFFFF; /* Grey 0 */
+    --background-l1: #FFFFFF; /* Grey 0 */
+    --section-header: #DEDFE0; /* Grey 200 */
+    --raised-content: #FFFFFF; /* Grey 0 */
+    --raised-content-hover: #EEEEEF; /* Grey 100 */
+    --text: #192028; /* Grey 800 */
+    --secondary-text: #192028A0; /* Grey 800 */
+    --icon: #192028; /* Grey 800 */
+    --link: #0A6BB9; /* Blue 800 */
+    --link-visited: #5A1378; /* Purple 800 */
+    --link-hover: #0B7ED9; /* Blue 700 */
+    --link-visited-hover: #741B99; /* Purple 700 */
+    --link-subtitle: #000000; /* Grey 1000 */
+    --button: #0A6BB9; /* Blue 800 */
+    --button-contrast: #FFFFFF; /* Grey 0 */
+    --hr: rgba(0, 0, 0, 0.25); /* Grey 1000 25% */
+}
+
+/* === Begin custom CSS === */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 160%;
+    background-color: var(--page-background);
+    color: var(--text);
+}
+
+/* Style all links blue */
+a:not(.return-breadcrumb):not(.button) {
+    color: var(--link);
+    text-decoration: underline;
+}
+
+/* Hide underline for lists, tables, and nav */
+main li > a:not(.ignore-a-styling):not(.button), nav a, main td > a {
+    text-decoration: none !important;
+}
+
+/* Color visited/hovered links differently */
+main a:not(.return-breadcrumb):not(.button):visited {
+    color: var(--link-visited);
+}
+main a:not(.return-breadcrumb):not(.button):hover {
+    color: var(--link-hover);
+}
+main a:not(.return-breadcrumb):not(.button):visited:hover {
+    color: var(--link-visited-hover);
+}
+
+strong, b {
+    font-weight: bold;
+}
+em, i {
+    font-style: italic;
+}
+u { 
+    text-decoration: underline;
+}
+
+hr {
+    border-color: var(--hr);
+    height: 0px;
+    box-sizing: border-box;
+}
+
+ul li ul {
+    margin-left: 16px;
+}
+
+li {
+    list-style: inside;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 24px 0;
+
+    background: var(--raised-content);
+
+    box-sizing: border-box;
+
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+td, th {
+    padding: 16px;
+    border: 0;
+}
+td > a:only-child {
+    display: block;
+    margin: -16px;
+    padding: 16px;
+}
+td a:hover {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background: var(--raised-content-hover);
+}
+th, td i {
+    font-weight: bold;
+    font-style: normal;
+}
+td[rowspan]:not([rowspan="1"]) {
+    vertical-align: text-top;
+}
+th, tr:not(:last-child) td{
+    border-bottom: 1px solid var(--hr);
+}
+thead {
+    background-color: var(--section-header);
+}
+
+
+main p, main li {
+    margin: 24px 0;
+}
+
+
+.button {
+    padding: 0 16px 0 16px;
+    height: 36px;
+    border-radius: 4px;
+    min-width: 64px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    color: var(--button);
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 24px;
+    line-height: 2.25rem;
+    letter-spacing: 0.0892857143em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.button:hover {
+    cursor: pointer;
+}
+
+.button .button-ripple {
+    position: absolute;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+}
+
+.button .button-ripple::before, .button .button-ripple::after {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    content: "";
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    background-color: var(--button);
+}
+.button .button-ripple::before {
+    transition: opacity 15ms linear, background-color 15ms linear;
+    z-index: 1;
+}
+.button .button-ripple::after {
+    z-index: 0;
+    transition: opacity 150ms linear;
+}
+.button:hover .button-ripple::before, .button .button-ripple::after {
+    opacity: 0.04;
+}
+.button:active .button-ripple::after {
+    transition-duration: 75ms;
+    opacity: 0.12;
+    
+}
+
+
+.primary-action {
+
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    background-color: var(--button);
+    color: var(--button-contrast);
+}
+.primary-action:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.primary-action:active {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.primary-action .button-ripple {
+    border-radius: 4px;
+}
+.primary-action .button-ripple::before {
+    background-color: white;
+    opacity: 0;
+}
+.primary-action:hover .button-ripple::before {
+    opacity: 0.08;
+}
+.primary-action .button-ripple::after {
+    transition: opacity 150ms linear;
+}
+.primary-action:active .button-ripple::after {
+    transition-duration: 75ms;
+    opacity: 0.24;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: initial;
+    letter-spacing: 0px;
+    margin: 40px 0 24px 0;
+}
+h2 {
+    font-size: 34px;
+    line-height: initial;
+    letter-spacing: 0.25px;
+    margin: 40px 0 24px 0;
+}
+h3 {
+    font-size: 24px;
+    line-height: initial;
+    letter-spacing: 0px;
+    margin: 40px 0 24px 0;
+}
+h4 {
+    font-size: 20px;
+    line-height: initial;
+    letter-spacing: 0.15px;
+    margin: 32px 0 24px 0;
+}
+
+
+/* main */
+main {
+    min-height: calc(100vh - 8em);
+}
+.sbn-main {
+    padding: 16px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sbn-main.index {
+    max-width: 1100px;
+}
+
+.intro {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+.intro-features {
+    flex: 1;
+    margin: 32px;
+    min-width: 300px;
+}
+.intro-text {
+    flex: 2;
+    min-width: 500px;
+}
+
+.intro-features li {
+    color: var(--text) !important;
+}
+
+.return-breadcrumb {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 32px 0;
+    text-decoration: none;
+    color: var(--secondary-text);
+}
+.return-breadcrumb:hover {
+    color: var(--text);
+}
+.return-breadcrumb svg {
+    fill: var(--secondary-text);
+    margin-right: 8px;
+}
+.return-breadcrumb:hover svg{
+    fill: var(--icon);
+}
+
+.card {
+    background: var(--raised-content);
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column;
+}
+.card-content {
+    flex-grow: 1;
+}
+.card h1, .card h2, .card h3, .card h4, .card h5 {
+    font-size: 20px;
+    display: block;
+    margin: 0;
+    padding: 16px;
+}
+.card p, .card li {
+    color: var(--secondary-text);
+    padding: 0 16px 16px 16px;
+    margin: 0;
+}
+.card img {
+    height: 300px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+    background-color: white;
+}
+.card-actions {
+    padding: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+.card-actions .button {
+    margin-left: 8px;
+}
+
+.primary-actions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.primary-actions .card {
+    flex: 1;
+    margin: 16px;
+    min-width: 400px;
+}
+
+
+
+.sbn-footer {
+    width: 100%;
+    background-color: var(--raised-content);
+    color: var(--text);
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+
+}
+.sbn-footer-text {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.sbn-footer-extended {
+    background-color: var(--section-header);
+    color: var(--text);
+    height: 20em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sbn-footer-psi-container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.psi-logo {
+    width: 12em;
+    background: white;
+    padding: 0;
+    margin: 0 0 1em 0;
+    border-radius: 10em;
+}

@@ -1,33 +1,39 @@
-<html>
-<title>Small Bodies Image Browser</title>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>SBIB - Small Bodies Image Browser</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+</head>
+
 <body>
+    <main>
+        <div class="sbn-main">
 
-<table border=0 width="100%">
-<tbody><tr bgcolor="#cccccc" valign=top>
-  <td>
-   <table width="100%">
-   <tbody><tr>
-   <td align=left>
-   <img alt="NASA Logo" src=images/nasa_logo.gif><BR>
-   </td>
-   <td align=right valign=middle>
-      <font face="Arial" size=6>Small Bodies Image Browser</font>
-   </td>
-   </tr>
-   </tbody></table>
-   </td>
-   </tr>
-   <tr>
-   <td>
-      <img alt="PDS Logo" width=100% src=images/pds_banner.jpg>
-   </td>
-   </tr>
-</tbody></table><BR><BR>
+            <a class="return-breadcrumb" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"/><path d="M24 24H0V0h24v24z" fill="none"/></svg>
+                <span>Back to SBIB Home</span>
+            </a>
 
-<H3 style="margin:2px">
+            <!-- Content goes here -->
+
+            <H1> About SBIB - Ceres </H1>
+
+<h2>
 Ceres Mission Phases (end to beginning) covered in SBIB
-</H3>
-<UL style="margin-top:0">
+</h2>
+<UL>
 <LI> XMO7 - Elliptical orbit; resolution between 3m/pixel and 390m/pixel 
 <LI> XMO6 - Intermediate orbit; resolution between 40m/pixel and 300m/pixel 
 <LI> Opposition - Opposition observations; FOV about the size of Ceres
@@ -42,44 +48,61 @@ Ceres Mission Phases (end to beginning) covered in SBIB
 <LI> Approach - FOV is always larger than Ceres
 </UL>
 
-<H3 style="margin-bottom:2px">Map Projection and Arc-GIS</H3>
+<h2>Map Projection and Arc-GIS</h2>
 Data can be imported into ArcMAP 10.1 by downloading the ISIS Map cubes.  
 <BR>
 Most images (PNG and thumbnails) were generated
 with an equirectangular projection.
 Images that are near the poles have been projected with a polar projection.  
 
-<H3 style="margin-bottom:2px">Maps</H3>
+<h2>Maps</h2>
 We use several different overview maps for the Image Browser.  
-<UL style="margin-top:0">
+<UL>
 <LI>Topographic from HAMO
 <LI>Equatorial from DLR
 <LI>Northpole from DLR
 <LI> Southpole from DLR
 </UL>
 
-<H3 style="margin-bottom:2px">Data processing</H3>
+<h2>Data processing</h2>
 We used the USGS software tool <a href=http://isis.astrogeology.usgs.gov>Integrated Software for Imagers and Spectrometers (ISIS)</a>
 as the main tool to process the data.  
 We used the pre-Dawn shape model posted at USGS and the ISIS
 software routines to convert images into map-based projections.
 
-<H3 style="margin-bottom:2px">Coordinates</H3>
+<h2>Coordinates</h2>
 This software uses the Dawn post-Survey updated coordinate system (
 <a href=https://sbn.psi.edu/pds/resource/ceres_coord_sys_151014.pdf>details</a>). 
 <BR>
-<UL style="margin-top:0">
+<UL>
 <LI>Spin Pole of Ceres at RA=291.4 deg, Dec=66.8 deg
 <LI>Rotation period 0.3781 days 
 <LI>Prime Meridian Angle W0=170.65 and rotation rate Omega=952.15 deg/day
 </UL><BR>
 
 
-<H3 style="margin-bottom:2px">Comments</H3>
-email epalmer at psi dot edu with questions, comments or concerns
-
-<BR><BR>
-
-
-</body></html>
-
+            <!-- Content ends here -->
+         </div>
+      </main>
+  
+  
+      <footer class="sbn-footer">
+          <p class="sbn-footer-text">
+              Please send comments, bugs and suggestions to epalmer at psi dot edu
+          </p>
+      </footer>
+  
+      <div class="sbn-footer-extended">
+          <aside class="sbn-footer-psi-container">
+              <img src="images/PSI_Logo.png" alt="PSI Logo" title="PSI Logo" class="psi-logo">
+              <span>Hosted by the Planetary Science Institute</span>
+          </aside>
+      </div>
+  
+      <link href="https://pds.nasa.gov/pds-app-bar/pds-app-bar.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="https://pds.nasa.gov/pds-app-bar/pds-app-bar.js"></script>
+  
+      <script type="text/javascript" src="http://localhost:321/sbn-bar/sbn-bar.js"></script>
+  </body>
+  
+  </html>
